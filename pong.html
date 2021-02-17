@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: #313335;
+            }
+            .gameover{
+                font-family: "Lucida Console", Courier, monospace;
+                font-size:40px;
+                fill:#FF9AA2;
+            }
+            .victory{
+                font-family: "Lucida Console", Courier, monospace;
+                font-size:40px;
+                fill:#B2d9ea;
+            }
+            .refresh{
+                font-family: "Lucida Console", Courier, monospace;
+                font-size:20px;
+                fill:#c3d2d8;
+            }
+
+        </style>
+        <script src="./dist/pong.js"></script>
+    </head>
+    <body>
+        <h1>Pong Arcade</h1>
+        <div>
+            Welcome to Pong Arcade!
+            <br />
+            <br />
+            How to play?
+            <br />
+            1)Choose the level, Move Left Paddle with mouse or up down arrow
+            <br />
+            <br />
+            2)The first player to reach 7 points will WIN the game
+            <br />
+            <br />
+            Level 1: Very EASY 
+            <button type="button" id="level1">START</button>
+             <script type="text/javascript"></script>
+            
+             <br />
+            <br />
+            <br />
+             Level 2: MEDIOCRE 
+             
+             <button type="button" id="level2">START</button>
+             <script type="text/javascript"></script>
+             <br />
+            <br />
+            <br />
+            
+             Level 3: CHALLENGE? 
+             <button type="button" id="level3">START</button>
+             <script type="text/javascript"></script>
+             <br />
+             <br />
+             <br />
+             Please refresh before you start another game midway through.
+             <br />
+             <br />
+             <br />
+             ### The Game will refresh after 5 seconds you finished a game.
+             <br />
+             <br />
+             Pick your choice of level again to play :)
+
+             <input type="button" id = "Refresher" value="Click here to refresh NOW" onClick="window.location.reload()">
+             <br />
+             <br />
+             
+        </div>
+        <svg id="canvas" width="600" height="600">
+            <line x1="300" y1="0" x2="300" y2="600" style="stroke:whitesmoke;stroke-width:2;stroke-dasharray: 10 5"/>
+            <circle id="ball" cx="300" cy="310" r="5"  style= "fill:#E2F0CB"  />
+            <rect id= "player"  x= "20" y = "300" width="10" height="70" style="fill: #B2d9ea" />
+            <rect id ="comp" x= "580" y = "300" width="10" height="70" style="fill:#FF9AA2" />
+            <text id = "compscore" x="450" y="100" style="font-size:30px; fill:#FF9AA2">
+            </text>
+            <text id = "playerscore" x="150" y="100" style="font-size:30px; fill:#B2d9ea;">
+            </text>
+            
+        </svg>
+    </body>
+</html>
